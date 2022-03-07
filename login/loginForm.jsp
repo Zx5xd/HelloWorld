@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=utf-8"  pageEncoding="utf-8"%>
+
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -18,9 +20,9 @@
      
      <button type="submit">login</button>
      <p class="message"><ul id="ullog">
-	  <li id="lilogb"><a href="#">회원가입</a></li>|
-	  <li id="lilog"><a href="#">아이디/</a> 
-               <a href="#" class="pwd">비밀번호 찾기</a></li>
+	  <li id="lilogb"><a href="joinForm.jsp">회원가입</a></li>|
+	  <li id="lilog"><a href="findIdForm.jsp">아이디/</a> 
+               <a href="findPassForm.jsp" class="pwd">비밀번호 찾기</a></li>
      </ul></p>
      
   </form>

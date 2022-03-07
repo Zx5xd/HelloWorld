@@ -1,0 +1,17 @@
+@charset "UTF-8";
+.table01 { border-top:2px solid #0098b2; border-bottom:2px solid #0098b2; }
+.table01 td { height:30px; text-align:left; border-bottom:1px solid #d2d2d2; }
+.table01 .tle { padding-left:15px; font-weight:bold; font-size:13px;  color:#909090; background:#fcfcfc; border-right:1px solid #eeeeee; }
+.table01 .cont { padding:8 10 8 20; }
+.table01 .nobd { padding:0px; margin:0px; border:0px; }
+.table01 .cmt { color:#A9A9A9; font-size:11px; }
+.ed { height:22px; border:1px solid #DADADA; padding:2 2 0 2; }
+.ed2 { height:22px; border:0px; padding:2 2 0 2; background:#FFFFFF; }
+.txt { border:1px solid #DADADA; padding:3px; }
+.table02 { border:2px solid #0098b2; }
+.button { background-color: #5AD2FF; }
+
+ a:link	 {font-family:"";color:black;text-decoration:none;}
+ a:visited {font-family:"";color:black;text-decoration:none;}
+ a:hover	 {font-family:"";color:black;text-decoration:underline;}
+
