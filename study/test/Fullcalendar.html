@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <style>
+      #calendar{
+        width: 80%;
+      }
+    </style>
+    <title>FullCalendar</title>
     <meta charset='utf-8' />
-    <link href='main.css' rel='stylesheet' />
-    <script src='main.js'></script>
-    <script>
+    <link href='.\fullCalendar_lib\main.css' rel='stylesheet' />
+    <link href='.\fullCalendar_lib\locales\ko.js'>
+    <script src='.\fullCalendar_lib\main.js'></script>
 
-      
+    <script>
+       
       document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth'
+        var calendar = new FullCalendar.Calendar(calendarEl, 
+        {headerToolbar: {
+          left: 'prevYear,prev,', ///, 
+          center: 'title',
+          right: 'next,nextYear today' //'dayGridMonth,dayGridWeek,dayGridDay' 
+        },
+      locale:"ko",
+        initialDate: new Date(),
+        navLinks: false,  
+        editable: true,
+        dayMaxEvents: true, // allow "more" link when too many events
+        events: [
+          {
+          //  title: 'All Day Event',
+          //  start: '2022-03-01'
+          }
+        ],
+      /*
+        dateClick: function() {
+          alert('a day has been clicked!');
+        },*/
+      eventClick: function(event) {
+      console.log(event.event._def.extendedProps.key);
+      //window.open('팝업여');
+      }
         });
         calendar.render();
       });
-
-                
-      $('#calendar').FullCalendar ({ googleCalendarApiKey : 'AIzaSyDyzftOEGP5DCIJZhW3EOzzE03W0W39Pzo',
-      header: { left: '', center: 'prev, title, next',
-       // right: 'month, basicWeek, agendaDay', 
-       right: '' }, 
-       monthYearFormat: 'MMMM YYYY', ventLimit: true, 
-       fixedWeekCount: false, defaultView: 'month', 
-       dayNamesShort: ["S","M","T","W","T","F","S"],
-       buttonText: { today : "오늘", month : "월별",
-        week : "주별", day : "일별", },
-         eventSources : 
-         // 한국 기념일 ko.south_korea 추가 
-         [ { googleCalendarId : 'wvw201016@gmail.com' } , 
-         { googleCalendarId : 'ko.south_korea#holiday@group.v.calendar.google.com' , 
-         className : 'ko_event' } ] });
-
-
-           
     </script>
   </head>
   <body>

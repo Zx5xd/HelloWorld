@@ -4791,7 +4791,7 @@ var FullCalendar = (function (exports) {
         return parents;
     }
 
-    // given a function that resolves a result asynchronously.
+    // given c function that resolves a result asynchronously.
     // the function can either call passed-in success and failure callbacks,
     // or it can return a promise.
     // if you need to pass additional params to func, bind them first.
